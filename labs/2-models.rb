@@ -20,6 +20,18 @@ Salesperson.destroy_all
 # 1b. check out the model file
 
 # 2. insert 1-2 rows in salespeople table.
+puts "there are #{Salesperson.all.count} salespeople"
+
+new_salesperson = Salesperson.new  #start with empty hash#
+
+new_salesperson ["first_name"] = "Steve" #build the inputs for the hash*
+new_salesperson ["last_name"] = "Jobs"
+new_salesperson ["email"] = "stevejobs@apple.com"
+
+puts new_salesperson.inspect
+puts "there are #{Salesperson.all.count} salespeople"
+
+new_salesperson.save
 
 # 3. write code to display how many salespeople rows are in the database
 
